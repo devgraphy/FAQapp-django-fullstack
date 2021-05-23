@@ -4,7 +4,7 @@
 
 질문 답변 게시판이므로 질문과 답변에 해당하는 모델이 있어야 한다.
 
-
+[Model field reference | Django documentation | Django (djangoproject.com)](https://docs.djangoproject.com/en/3.0/ref/models/fields/#field-types)
 
 ## 모델 속성 구상
 
