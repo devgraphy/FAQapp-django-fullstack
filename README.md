@@ -192,3 +192,15 @@ Answer 모델 데이터에는 Question 모델 데이터가 연결되어 있으�
 >
 >이때는 질문과 답변이 달리는 게시판을 상식적으로 생각해 보자. 질문 1개에는 1개 이상의 답변이 달릴 수 있으므로 질문에 달린 답변은 q.answer_set으로 조회해야 한다(답변 세트를 조회). 답변은 질문 1개에 대한 것이므로 애초에 여러 개의 질문을 조회할 수 없다. 다시 말해 답변 1개 입장에서는 질문 1개만 연결되어 있으므로 a.question만 실행할 수 있다. 1개의 답변으로 여러 개의 질문을 a.question_set으로 조회하는 것은 불가능하며, 상식적으로 생각해 보아도 이상하다. 연결모델명_set은 정말 신통방통한 장고의 기능이 아닐 수 없다. 연결모델명_set은 자주 사용할 기능이니 꼭 기억하자.
 
+
+
+## 장고 Admin에 데이터 검색 기능 추가
+
+```python
+class QuestionAdmin(admin.ModelAdmin):
+    search_fields = ['subject']
+
+
+admin.site.register(Question, QuestionAdmin)
+```
+
