@@ -1,1 +1,3 @@
-.faqapp/__pycache__/
+faqapp/__pycache__/*
+faqapp/migrations/__pycache__/*
+faqapp_fullstack/__pycache__/*
